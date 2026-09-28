@@ -1,0 +1,35 @@
+{
+  "name": "رابط | RABIT",
+  "short_name": "رابط",
+  "description": "تطبيق بناء وتنمية العلاقات الإيجابية — الأخصائي النفسي ياسين الحموي",
+  "lang": "ar",
+  "dir": "rtl",
+  "id": "/RABIT/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#f8fcfd",
+  "background_color": "#f8fcfd",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
