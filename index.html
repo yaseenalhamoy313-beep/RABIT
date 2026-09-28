@@ -322,6 +322,8 @@ h2{font-size:25px;line-height:1.45;color:var(--deep)}
 @media(max-width:520px){.profile-topgrid{grid-template-columns:1fr}.profile-ring{width:100px;height:100px}}
 @media(max-width:380px){.scale4{grid-template-columns:repeat(2,1fr)}.scale-choice span{min-height:55px}.score-select{align-items:flex-start;flex-direction:column}.score-select select{width:100%}}
 
+
+.book-card{align-items:flex-start}.book-cover{width:78px;height:108px;object-fit:cover;border-radius:12px;border:1px solid var(--line);box-shadow:0 5px 14px rgba(0,0,0,.10);flex:0 0 auto;background:#fff}.book-info{flex:1;min-width:0}.book-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.book-actions .pill{text-decoration:none}
 </style>
 
 <link rel="manifest" href="./manifest.webmanifest">
@@ -534,10 +536,10 @@ books:()=>`
 <div class="module-hero"><div class="bigicon">📘</div><h1>كتب وأبحاث</h1><p class="sub">مكتبة قراءة في التواصل والعلاقات الإيجابية والأسرة. اضغط «فتح الكتاب» لعرض ملف PDF.</p></div>
 <div class="notice">📚 الكتب المرفقة مواد قراءة مرجعية. حقوق كل كتاب ومحتواه محفوظة لأصحاب الحقوق والناشرين.</div>
 <div class="list">
-<div class="item"><div class="n">🌻</div><div style="flex:1"><b>التواصل غير العنيف: لغة حياة</b><div class="mini">د. مارشال ب. روزنبرج · التواصل الرحيم عبر الملاحظة والمشاعر والاحتياجات والطلبات.</div><a class="pill" style="display:inline-block;margin-top:9px;text-decoration:none" href="books/nonviolent-communication-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div>
-<div class="item"><div class="n">💬</div><div style="flex:1"><b>فن المحادثات الواعية</b><div class="mini">تشاك ويزنر · تغيير طريقتنا في الكلام والاستماع والتفاعل، وبناء محادثات أكثر وعياً.</div><a class="pill" style="display:inline-block;margin-top:9px;text-decoration:none" href="books/conscious-conversations-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div>
-<div class="item"><div class="n">🤝</div><div style="flex:1"><b>لغة الجسد</b><div class="mini">آلان وباربرا بييز · مدخل لفهم الإشارات غير اللفظية ودورها في التواصل.</div><a class="pill" style="display:inline-block;margin-top:9px;text-decoration:none" href="books/body-language-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div>
-<div class="item"><div class="n">👨‍👩‍👧‍👦</div><div style="flex:1"><b>دليل التربية الأسرية الإيجابية</b><div class="mini">دليل عملي يركز على بناء علاقات صحية وقوية بين الآباء والأطفال، والتواصل والتأديب الإيجابي ودعم النمو.</div><a class="pill" style="display:inline-block;margin-top:9px;text-decoration:none" href="books/positive-family-parenting-guide-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div>
+<div class="item book-card"><img class="book-cover" src="covers/nonviolent-communication.jpg" alt="غلاف كتاب التواصل غير العنيف: لغة حياة"><div class="book-info"><b>التواصل غير العنيف: لغة حياة</b><div class="mini">د. مارشال ب. روزنبرج · التواصل الرحيم عبر الملاحظة والمشاعر والاحتياجات والطلبات.</div><div class="book-actions"><a class="pill" href="books/nonviolent-communication-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div></div>
+<div class="item book-card"><img class="book-cover" src="covers/conscious-conversations.jpg" alt="غلاف كتاب فن المحادثات الواعية"><div class="book-info"><b>فن المحادثات الواعية</b><div class="mini">تشاك ويزنر · تغيير طريقتنا في الكلام والاستماع والتفاعل، وبناء محادثات أكثر وعياً.</div><div class="book-actions"><a class="pill" href="books/conscious-conversations-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div></div>
+<div class="item book-card"><img class="book-cover" src="covers/body-language.jpg" alt="غلاف كتاب لغة الجسد"><div class="book-info"><b>لغة الجسد</b><div class="mini">آلان وباربرا بييز · مدخل لفهم الإشارات غير اللفظية ودورها في التواصل.</div><div class="book-actions"><a class="pill" href="books/body-language-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div></div>
+<div class="item book-card"><img class="book-cover" src="covers/positive-family-parenting-guide.jpg" alt="غلاف دليل التربية الأسرية الإيجابية"><div class="book-info"><b>دليل التربية الأسرية الإيجابية</b><div class="mini">دليل عملي يركز على بناء علاقات صحية وقوية بين الآباء والأطفال، والتواصل والتأديب الإيجابي ودعم النمو.</div><div class="book-actions"><a class="pill" href="books/positive-family-parenting-guide-ar.pdf" target="_blank" rel="noopener">فتح الكتاب PDF</a></div></div></div>
 </div>`
 };
 
