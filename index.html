@@ -324,6 +324,94 @@ h2{font-size:25px;line-height:1.45;color:var(--deep)}
 
 
 .book-card{align-items:flex-start}.book-cover{width:78px;height:108px;object-fit:cover;border-radius:12px;border:1px solid var(--line);box-shadow:0 5px 14px rgba(0,0,0,.10);flex:0 0 auto;background:#fff}.book-info{flex:1;min-width:0}.book-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.book-actions .pill{text-decoration:none}
+
+/* ===== RABIT v0.5 — Real dark mode ===== */
+body.dark{
+  --primary:#58b9ef; --deep:#dff4ff; --turq:#41d6d1; --mint:#83e2a9;
+  --bg:#0c1720; --card:#13222d; --text:#e7f5fb; --muted:#9bb0bd; --line:#263c49;
+  --shadow:0 14px 40px rgba(0,0,0,.30);
+  background:#081118;color:var(--text);
+}
+html.dark{background:#081118;color-scheme:dark}
+body.dark .phone{background:var(--bg);box-shadow:0 0 60px rgba(0,0,0,.38)}
+body.dark .bottomnav{background:rgba(10,20,28,.96);border-top-color:var(--line);box-shadow:0 -10px 30px rgba(0,0,0,.22)}
+body.dark .splash{background:radial-gradient(circle at 10% 0%,rgba(23,200,196,.12),transparent 30%),radial-gradient(circle at 100% 70%,rgba(11,125,195,.13),transparent 34%),#0a141c}
+body.dark .logo{mix-blend-mode:normal}
+body.dark .card,body.dark .service,body.dark .item,body.dark .sheet,body.dark .iconbtn,body.dark .star,body.dark .geno-tool,body.dark .geno-canvas-wrap,body.dark .geno-stat,body.dark .geno-insight,body.dark .profile-ring-card,body.dark .profile-section,body.dark .profile-summary,body.dark .test-card,body.dark .score-row{background:var(--card);border-color:var(--line);color:var(--text)}
+body.dark .field input,body.dark .field textarea,body.dark .field select,body.dark .score-select select,body.dark .test-number{background:#0f1d27;color:var(--text);border-color:var(--line);color-scheme:dark}
+body.dark input::placeholder,body.dark textarea::placeholder{color:#7f96a5}
+body.dark .status,body.dark .module-hero,body.dark .geno-topcard{background:linear-gradient(135deg,rgba(65,214,209,.10),rgba(88,185,239,.08));border-color:rgba(65,214,209,.18)}
+body.dark .notice,body.dark .result,body.dark .assessment-intro,body.dark .interpret-box,body.dark .profile-empty,body.dark .geno-link-status{background:#10232c;border-color:#28444e;color:#d9eef4}
+body.dark .score-hero{background:linear-gradient(135deg,#102b2b,#102638);border-color:#244650}
+body.dark .test-item{background:#0e1b24;border-color:var(--line)}
+body.dark .mood{background:rgba(19,34,45,.88);color:var(--text)}
+body.dark .mood.active{background:#142d31}
+body.dark .pill{background:#13222d;color:var(--text);border-color:var(--line)}
+body.dark .pill.active{background:#153b39;color:#78e5dd;border-color:#3acfc7}
+body.dark .service .ico{background:linear-gradient(145deg,#142d32,#172b3b) !important;border-color:#25434e}
+body.dark .geno-legend-item{background:#0f1d27}
+body.dark .geno-lane{background:rgba(14,29,39,.88);border-color:#2b4651}
+body.dark .geno-canvas{background:linear-gradient(to bottom,rgba(88,185,239,.035) 0 24.7%,rgba(131,226,169,.045) 25% 49.7%,rgba(65,214,209,.035) 50% 74.7%,rgba(155,176,189,.035) 75% 100%)}
+body.dark .geno-symbol{background:#10202b}
+body.dark .modal{background:rgba(0,0,0,.62)}
+body.dark .slider{background:#405563}
+body.dark .scale-choice span{background:#10202b;border-color:var(--line)}
+body.dark .scale-choice input:checked+span{background:#153b39;border-color:var(--turq)}
+body.dark .profile-ring{background:conic-gradient(var(--turq) calc(var(--p)*1%),#263944 0)}
+body.dark .profile-chip,body.dark .test-tag{background:#142a35;color:#a9dfea;border-color:#284652}
+body.dark .book-cover{background:#fff}
+body.dark .clean-illus,body.dark .illus-wrap{background:#0f1d27;border-color:var(--line)}
+body.dark .clean-illus-1::before,body.dark .clean-illus-1::after{background:linear-gradient(135deg,rgba(12,23,32,.98),rgba(12,23,32,.92) 65%,rgba(12,23,32,0))}
+body.dark .toast{background:#e1f4f8;color:#10202b}
+body.dark .course-cta{background:linear-gradient(135deg,#0c536f,#0b766f)}
+body.dark .course-cta .btn{background:#e8f8f8;color:#075d64}
+
+/* ===== RABIT v0.5 — Relationship strengths tree ===== */
+.rel-tree-builder{display:grid;gap:12px}
+.tree-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tree-step{padding:11px 8px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-align:center;font-size:12px;color:var(--muted);line-height:1.45}
+.tree-step b{width:27px;height:27px;margin:0 auto 6px;display:grid;place-items:center;border-radius:50%;background:#e7f3f8;color:var(--primary)}
+.tree-step.active{border-color:var(--turq);box-shadow:0 0 0 3px rgba(23,200,196,.09);color:var(--text)}
+.tree-step.done{border-color:#99dec0;color:#18795d;background:#f2fcf7}
+.tree-step.done b{background:#daf6e7;color:#18795d}
+.tree-self-summary{display:flex;align-items:flex-start;gap:12px}
+.tree-self-badge{width:52px;height:52px;flex:0 0 52px;border-radius:18px;background:linear-gradient(145deg,#e2faf4,#e7f4ff);display:grid;place-items:center;font-size:27px}
+.tree-strength-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tree-strength-chip{padding:5px 9px;border-radius:999px;background:#eaf9f5;border:1px solid #cbeee3;color:#147766;font-size:11px;font-weight:800}
+.tree-quick-add{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.tree-role-btn{min-height:52px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:15px;font-weight:800;padding:8px 5px}
+.tree-role-btn span{display:block;font-size:20px;margin-bottom:2px}
+.tree-stage{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,#fbfeff,#f4fbf8);padding:20px 10px 28px;box-shadow:var(--shadow)}
+.tree-stage::before{content:"";position:absolute;top:42px;bottom:34px;left:50%;width:4px;transform:translateX(-50%);border-radius:99px;background:linear-gradient(var(--mint),var(--turq),var(--primary));opacity:.42}
+.tree-stage-title{text-align:center;position:relative;z-index:2;margin-bottom:14px}
+.tree-branch-row{position:relative;z-index:2;margin:21px 0 26px;padding-top:24px}
+.tree-branch-row::before{content:"";position:absolute;top:10px;left:12%;right:12%;height:2px;background:#b6d9d5}
+.tree-branch-row::after{content:"";position:absolute;top:10px;left:50%;width:2px;height:18px;background:#b6d9d5}
+.tree-level-title{display:table;margin:0 auto 10px;padding:5px 11px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:11px;color:var(--muted);font-weight:900}
+.tree-members{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:9px}
+.tree-member{width:145px;min-height:126px;border:1px solid var(--line);background:var(--card);border-radius:19px;padding:11px;box-shadow:0 7px 18px rgba(12,101,140,.08);text-align:center;position:relative}
+.tree-member.self{border:2px solid var(--turq);box-shadow:0 0 0 4px rgba(23,200,196,.09),0 7px 18px rgba(12,101,140,.08)}
+.tree-member .avatar{width:38px;height:38px;margin:0 auto 6px;border-radius:50%;display:grid;place-items:center;background:#edf8fb;font-size:20px}
+.tree-member .role{font-size:10px;color:var(--muted);font-weight:800}
+.tree-member .name{font-weight:900;font-size:14px;margin:2px 0 7px;line-height:1.35}
+.tree-member .strengths{font-size:10px;line-height:1.5;color:#137565;background:#effaf6;border-radius:12px;padding:7px;margin-top:4px}
+.tree-member .edit{margin-top:8px;border:0;background:transparent;color:var(--primary);font-weight:900;font-size:11px;padding:4px}
+.tree-empty{position:relative;z-index:2;text-align:center;color:var(--muted);padding:14px}
+.tree-print-actions{display:flex;gap:9px;align-items:stretch}
+.tree-print-actions .btn{flex:1}
+@media(max-width:420px){.tree-quick-add{grid-template-columns:repeat(3,1fr)}.tree-member{width:132px}.tree-steps{gap:5px}.tree-step{padding:9px 4px;font-size:10px}}
+
+body.dark .tree-step,body.dark .tree-role-btn,body.dark .tree-member,body.dark .tree-level-title{background:var(--card);border-color:var(--line);color:var(--text)}
+body.dark .tree-step b{background:#183342;color:#78cff7}
+body.dark .tree-step.done{background:#123028;color:#91e5c0;border-color:#285d4b}
+body.dark .tree-step.done b{background:#1d4939;color:#91e5c0}
+body.dark .tree-self-badge{background:linear-gradient(145deg,#153630,#162d3d)}
+body.dark .tree-strength-chip{background:#14352e;border-color:#28574a;color:#8fe2c1}
+body.dark .tree-stage{background:linear-gradient(180deg,#0f1d27,#0d1b22);border-color:var(--line)}
+body.dark .tree-branch-row::before,body.dark .tree-branch-row::after{background:#315b59}
+body.dark .tree-member .avatar{background:#172f39}
+body.dark .tree-member .strengths{background:#12332d;color:#8ee0bf}
+
 </style>
 
 <link rel="manifest" href="./manifest.webmanifest">
@@ -503,11 +591,7 @@ const modules=[
 ];
 
 const content={
-tree:()=>`
-<div class="module-hero"><div class="bigicon">🌳</div><h1>شجرة علاقاتي</h1><p class="sub">حدد أهم دوائر حياتك، ثم راقب أين تحتاج إلى قرب أكبر أو حدود أوضح.</p></div>
-<div class="card"><h3>ارسم دوائرك</h3><div class="pillrow" id="treePills">${['الأسرة','الشريك','الأصدقاء','الدراسة','العمل','المجتمع'].map(x=>`<button class="pill" onclick="this.classList.toggle('active')">${x}</button>`).join('')}</div>
-<div class="section-title">قرب العلاقة المختارة</div><input class="range" type="range" min="1" max="10" value="7"><p class="mini">1 = بعيدة جداً · 10 = قريبة وداعمة</p>
-<div class="field"><textarea id="treeNote" placeholder="ما العلاقة التي أريد تقويتها هذا الأسبوع؟"></textarea></div><button class="btn primary full" onclick="saveExercise('شجرة علاقاتي','treeNote')">حفظ التأمل</button></div>`,
+tree:()=>treeHTML(),
 pulse:()=>`
 <div class="module-hero"><div class="bigicon">〽️</div><h1>نبض العلاقة</h1><p class="sub">فحص قصير لملاحظة ما يجري في علاقة مهمة، وليس أداة تشخيصية.</p></div>
 <div class="card"><div class="field"><input id="pulseName" placeholder="اسم مختصر للعلاقة: صديق، زوج، أم..."></div>
@@ -544,6 +628,134 @@ books:()=>`
 </div>`
 };
 
+
+
+/* ===== Guided relationship strengths tree ===== */
+const TREE_ROLES={
+ self:{label:'أنا',group:'self',icon:'🌿'},
+ father:{label:'الأب',group:'parent',icon:'👨'},
+ mother:{label:'الأم',group:'parent',icon:'👩'},
+ spouse:{label:'الزوج / الزوجة',group:'self',icon:'🤝'},
+ brother:{label:'الأخ',group:'sibling',icon:'👤'},
+ sister:{label:'الأخت',group:'sibling',icon:'👤'},
+ son:{label:'الابن',group:'child',icon:'🧑'},
+ daughter:{label:'الابنة',group:'child',icon:'🧑'},
+ grandfather:{label:'الجد',group:'grand',icon:'👴'},
+ grandmother:{label:'الجدة',group:'grand',icon:'👵'},
+ friend:{label:'صديق / صديقة',group:'other',icon:'🫶'},
+ other:{label:'شخص مهم آخر',group:'other',icon:'⭐'}
+};
+const TREE_GROUPS=[
+ {id:'grand',label:'الأجداد'},
+ {id:'parent',label:'الوالدان'},
+ {id:'self',label:'أنا والشريك'},
+ {id:'sibling',label:'الإخوة والأخوات'},
+ {id:'child',label:'الأبناء'},
+ {id:'other',label:'أشخاص مهمون آخرون'}
+];
+function treeDefaultData(){
+ const u=store.get('user',{});
+ return {members:[{id:'self',role:'self',name:u?.name&&!u.guest?u.name:'',strengths:''}]};
+}
+function treeData(){
+ let d=store.get('relationshipTree',null);
+ if(!d||!Array.isArray(d.members)){d=treeDefaultData();store.set('relationshipTree',d)}
+ if(!d.members.some(m=>m.id==='self'))d.members.unshift(treeDefaultData().members[0]);
+ return d;
+}
+function treeSaveData(d){store.set('relationshipTree',d)}
+function treeStrengths(v){
+ return String(v||'').split(/[،,;؛\n]+/).map(x=>x.trim()).filter(Boolean).slice(0,7);
+}
+function treeStrengthChips(v){
+ const a=treeStrengths(v);return a.length?a.map(x=>`<span class="tree-strength-chip">${escapeHTML(x)}</span>`).join(''):'<span class="mini">لم تُحدد نقاط القوة بعد</span>';
+}
+function treeHTML(){
+ const d=treeData(),me=d.members.find(m=>m.id==='self'),selfReady=treeStrengths(me?.strengths).length>0,others=d.members.filter(m=>m.id!=='self').length;
+ const step2=selfReady&&(others===0?'active':'done'),step3=others>0?'active':'';
+ return `<div class="rel-tree-builder">
+  <div class="module-hero"><div class="bigicon">🌳</div><h1>شجرة علاقاتي</h1><p class="sub">ابنِ شجرتك بدءاً من نفسك ونقاط قوتك، ثم أضف الأشخاص المهمين ونقاط القوة التي تراها في كل واحد منهم.</p></div>
+  <div class="tree-steps">
+   <div class="tree-step ${selfReady?'done':'active'}"><b>1</b>أنا ونقاط قوتي</div>
+   <div class="tree-step ${step2}"><b>2</b>أفراد الشجرة ونقاط قوتهم</div>
+   <div class="tree-step ${step3}"><b>3</b>الشجرة النهائية والطباعة</div>
+  </div>
+  <div class="card">
+   <div class="tree-self-summary">
+    <div class="tree-self-badge">🌿</div>
+    <div style="flex:1"><h3 style="margin-bottom:4px">ابدأ بنفسك</h3><div class="mini">حدد اسمك أو اكتب «أنا»، ثم دوّن أبرز نقاط القوة التي تميزك.</div><div class="tree-strength-list">${treeStrengthChips(me?.strengths)}</div></div>
+   </div>
+   <button class="btn ${selfReady?'outline':'primary'} full" style="margin-top:12px" onclick="treeOpenMember('self')">${selfReady?'تعديل بياناتي ونقاط قوتي':'حدد نفسك ونقاط قوتك'}</button>
+  </div>
+  ${selfReady?`<div class="card"><h3 style="margin-bottom:4px">أضف بقية الشجرة</h3><div class="mini" style="margin-bottom:11px">اختر الشخص، ثم اكتب اسمه ونقاط القوة الخاصة به. يمكنك إضافة أكثر من أخ أو أخت أو ابن أو ابنة.</div><div class="tree-quick-add">${['father','mother','spouse','brother','sister','son','daughter','grandfather','grandmother','friend','other'].map(r=>`<button class="tree-role-btn" onclick="treeOpenMember('', '${r}')"><span>${TREE_ROLES[r].icon}</span>${TREE_ROLES[r].label}</button>`).join('')}</div></div>`:`<div class="notice">أكمل الخطوة الأولى أولاً: عرّف نفسك وحدد نقاط قوتك، ثم ستظهر لك خيارات إضافة الأب والأم وبقية أفراد الشجرة.</div>`}
+  <div id="relationshipTreeStage">${treeStageHTML(d)}</div>
+  <div class="tree-print-actions">
+   <button class="btn outline" onclick="treeSaveSnapshot()">حفظ الشجرة</button>
+   <button class="btn primary" onclick="treePrint()">طباعة الشجرة / PDF</button>
+  </div>
+ </div>`;
+}
+function treeInit(){requestAnimationFrame(()=>treeRender())}
+function treeRender(){
+ const box=document.getElementById('relationshipTreeStage');if(!box)return;
+ box.innerHTML=treeStageHTML(treeData());
+}
+function treeStageHTML(d,printMode=false){
+ const members=d.members||[];
+ const rows=TREE_GROUPS.map(g=>{
+  const arr=members.filter(m=>(TREE_ROLES[m.role]||TREE_ROLES.other).group===g.id);
+  if(!arr.length)return '';
+  return `<div class="tree-branch-row"><div class="tree-level-title">${g.label}</div><div class="tree-members">${arr.map(m=>treeMemberCardHTML(m,printMode)).join('')}</div></div>`;
+ }).join('');
+ return `<div class="tree-stage"><div class="tree-stage-title"><b>شجرة العلاقات ونقاط القوة</b><div class="mini">اضغط أي بطاقة لتعديلها، أو اطبع النسخة النهائية عند اكتمال الشجرة.</div></div>${rows||'<div class="tree-empty">ابدأ بإضافة نفسك إلى الشجرة.</div>'}</div>`;
+}
+function treeMemberCardHTML(m,printMode=false){
+ const role=TREE_ROLES[m.role]||TREE_ROLES.other, strengths=treeStrengths(m.strengths);
+ return `<div class="tree-member ${m.id==='self'?'self':''}">
+  <div class="avatar">${role.icon}</div><div class="role">${role.label}</div><div class="name">${escapeHTML(m.name||role.label)}</div>
+  <div class="strengths"><b>نقاط القوة</b><br>${strengths.length?strengths.map(escapeHTML).join(' · '):'لم تُحدد بعد'}</div>
+  ${printMode?'':`<button class="edit" onclick="treeOpenMember('${m.id}')">تعديل</button>`}
+ </div>`;
+}
+function treeOpenMember(id='',presetRole=''){
+ const d=treeData(),m=id?d.members.find(x=>x.id===id):null,isSelf=id==='self',role=m?.role||presetRole||(isSelf?'self':'other');
+ openModal(`<h2>${m?'تعديل بيانات الشخص':'إضافة شخص إلى الشجرة'}</h2><div class="form">
+  <div class="field"><select id="tmRole" ${isSelf?'disabled':''}>${Object.entries(TREE_ROLES).map(([k,v])=>`<option value="${k}" ${k===role?'selected':''}>${v.label}</option>`).join('')}</select></div>
+  <div class="field"><input id="tmName" placeholder="الاسم أو اسم مختصر" value="${escapeHTML(m?.name||(isSelf?'أنا':''))}"></div>
+  <div class="field"><textarea id="tmStrengths" placeholder="نقاط القوة: مثال: متعاون، صبور، كريم، حسن الاستماع...">${escapeHTML(m?.strengths||'')}</textarea></div>
+  <div class="notice">اكتب من 1 إلى 7 نقاط قوة، ويمكن فصلها بفاصلة عربية (،) أو بفاصلة عادية.</div>
+  <button class="btn primary full" onclick="treeSaveMember('${id}')">${m?'حفظ التعديل':'إضافة إلى الشجرة'}</button>
+  ${m&&!isSelf?`<button class="btn outline full geno-danger" onclick="treeDeleteMember('${id}')">حذف من الشجرة</button>`:''}
+ </div>`);
+}
+function treeSaveMember(id=''){
+ const name=document.getElementById('tmName').value.trim(),strengths=document.getElementById('tmStrengths').value.trim();
+ if(!name){showToast('اكتب الاسم أو وصفاً مختصراً للشخص');return}
+ if(!treeStrengths(strengths).length){showToast('أضف نقطة قوة واحدة على الأقل');return}
+ const d=treeData(),role=id==='self'?'self':document.getElementById('tmRole').value;
+ if(id){const m=d.members.find(x=>x.id===id);if(!m)return;Object.assign(m,{name,role,strengths})}
+ else d.members.push({id:'tm'+Date.now(),name,role,strengths});
+ treeSaveData(d);closeModal();
+ if(currentModule==='tree'){document.getElementById('moduleBody').innerHTML=treeHTML();treeInit()}
+ showToast('تم حفظ الشخص ونقاط قوته ✓');
+}
+function treeDeleteMember(id){
+ if(!confirm('حذف هذا الشخص من شجرة العلاقات؟'))return;
+ const d=treeData();d.members=d.members.filter(m=>m.id!==id);treeSaveData(d);closeModal();
+ if(currentModule==='tree'){document.getElementById('moduleBody').innerHTML=treeHTML();treeInit()}
+ showToast('تم حذف الشخص من الشجرة');
+}
+function treeSaveSnapshot(){treeSaveData(treeData());completeOnly('شجرة علاقاتي',false);showToast('تم حفظ شجرة العلاقات على جهازك ✓')}
+function treePrint(){
+ const d=treeData(),me=d.members.find(m=>m.id==='self');
+ if(!treeStrengths(me?.strengths).length){showToast('حدد نفسك ونقاط قوتك أولاً');return}
+ const w=window.open('','_blank');if(!w){showToast('اسمح بالنوافذ المنبثقة لإتمام الطباعة');return}
+ const stage=treeStageHTML(d,true);
+ w.document.write(`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>شجرة العلاقات ونقاط القوة</title><style>
+  *{box-sizing:border-box}body{font-family:Arial,"Noto Sans Arabic",sans-serif;margin:0;background:#fff;color:#173f55;padding:24px}h1{text-align:center;margin:0 0 6px;color:#075f8d}.lead{text-align:center;color:#617786;margin:0 0 20px}.tree-stage{position:relative;overflow:hidden;border:1px solid #dceaf0;border-radius:24px;background:linear-gradient(180deg,#fbfeff,#f4fbf8);padding:20px 14px 28px;min-height:620px}.tree-stage::before{content:"";position:absolute;top:42px;bottom:34px;left:50%;width:4px;transform:translateX(-50%);border-radius:99px;background:linear-gradient(#7bdca4,#17c8c4,#0b7dc3);opacity:.42}.tree-stage-title{text-align:center;position:relative;z-index:2;margin-bottom:14px}.tree-branch-row{position:relative;z-index:2;margin:21px 0 26px;padding-top:24px;break-inside:avoid}.tree-branch-row::before{content:"";position:absolute;top:10px;left:12%;right:12%;height:2px;background:#b6d9d5}.tree-branch-row::after{content:"";position:absolute;top:10px;left:50%;width:2px;height:18px;background:#b6d9d5}.tree-level-title{display:table;margin:0 auto 10px;padding:5px 11px;border-radius:999px;background:#fff;border:1px solid #dceaf0;font-size:11px;color:#6f8290;font-weight:900}.tree-members{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:9px}.tree-member{width:145px;min-height:126px;border:1px solid #dceaf0;background:#fff;border-radius:18px;padding:11px;text-align:center;position:relative;box-shadow:0 5px 14px rgba(20,83,108,.07)}.tree-member.self{border:2px solid #17c8c4}.avatar{width:38px;height:38px;margin:0 auto 6px;border-radius:50%;display:grid;place-items:center;background:#edf8fb;font-size:20px}.role{font-size:10px;color:#73869a;font-weight:800}.name{font-weight:900;font-size:14px;margin:2px 0 7px;line-height:1.35}.strengths{font-size:10px;line-height:1.5;color:#137565;background:#effaf6;border-radius:12px;padding:7px;margin-top:4px}.mini{font-size:12px;color:#73869a}.footer{text-align:center;margin-top:15px;font-size:11px;color:#81929e}@page{size:A4 landscape;margin:10mm}@media print{body{padding:0}.tree-stage{box-shadow:none}.no-print{display:none!important}}
+ </style></head><body><h1>شجرة العلاقات ونقاط القوة</h1><p class="lead">نسخة نهائية قابلة للطباعة · تم بناؤها داخل تطبيق رابط RABIT</p>${stage}<div class="footer">رابط | RABIT — شجرة علاقاتي</div><script>setTimeout(()=>window.print(),250)<\/script></body></html>`);
+ w.document.close();
+}
 
 /* ===== Professional interactive genogram ===== */
 const GENO_GENERATIONS=[
@@ -902,7 +1114,7 @@ function homeIcon(id){
  return icons[id]||icons.tree;
 }
 function serviceHTML(m){return `<button class="service" onclick="openModule('${m.id}')"><div class="ico">${homeIcon(m.id)}</div><b>${m.title}</b><span class="chev">‹</span></button>`}
-function openModule(id){currentModule=id;document.getElementById('moduleBody').innerHTML=content[id]();syncFavBtn();go('module');if(id==='genogram')genoInit()}
+function openModule(id){currentModule=id;document.getElementById('moduleBody').innerHTML=content[id]();syncFavBtn();go('module');if(id==='genogram')genoInit();if(id==='tree')treeInit()}
 function toggleFavorite(){let f=store.get('favorites',[]); f=f.includes(currentModule)?f.filter(x=>x!==currentModule):[...f,currentModule];store.set('favorites',f);syncFavBtn();showToast(f.includes(currentModule)?'أضيف إلى المفضلة':'أزيل من المفضلة')}
 function syncFavBtn(){const f=store.get('favorites',[]);const b=document.getElementById('favBtn');b.classList.toggle('on',f.includes(currentModule));b.textContent=f.includes(currentModule)?'★':'☆'}
 function renderFavorites(){const f=store.get('favorites',[]),el=document.getElementById('favList');if(!f.length){el.innerHTML='<div class="empty">♡<h3>لا توجد عناصر محفوظة بعد</h3><p>افتح أي قسم واضغط النجمة لحفظه هنا.</p></div>';return} el.innerHTML='<div class="services">'+f.map(id=>serviceHTML(modules.find(x=>x.id===id))).join('')+'</div>';}
@@ -1123,7 +1335,7 @@ function openModal(html){document.getElementById('modalContent').innerHTML=html;
 function closeModal(){document.getElementById('modal').classList.remove('show')}
 function showToast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(()=>x.classList.remove('show'),2200)}
 function saveSetting(k,v){store.set(k,v);showToast('تم حفظ الإعداد')}
-function setDark(v){document.body.classList.toggle('dark',v);store.set('dark',v)}
+function setDark(v){document.body.classList.toggle('dark',v);document.documentElement.classList.toggle('dark',v);document.documentElement.style.colorScheme=v?'dark':'light';document.documentElement.style.backgroundColor=v?'#081118':'#edf6f8';const tm=document.querySelector('meta[name=\"theme-color\"]');if(tm)tm.setAttribute('content',v?'#081118':'#f8fcfd');store.set('dark',v)}
 function setFont(v){document.documentElement.style.setProperty('--fs',v+'px');store.set('font',v)}
 function syncSettings(){const d=store.get('dark',false),r=store.get('reminder',false),f=store.get('font',16);document.getElementById('darkToggle').checked=d;document.getElementById('remToggle').checked=r;document.getElementById('fontRange').value=f;setDark(d);setFont(f)}
 function resetApp(){if(confirm('هل تريد حذف كل بيانات رابط المحلية والبدء من جديد؟')){try{Object.keys(localStorage).filter(k=>k.startsWith('rabit_')).forEach(k=>localStorage.removeItem(k))}catch(e){}location.reload()}}
